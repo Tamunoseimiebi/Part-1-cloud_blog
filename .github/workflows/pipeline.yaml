@@ -19,4 +19,4 @@ jobs:
     - name: Build the Docker image # push The image to the docker hub
       run: docker build . --file Dockerfile --tag cloud_blog_app
     - name: Docker Push
-      run: docker push cloud_blog_app:latest
+      run: docker push tamunoseimiebi/cloud_blog_app:latest
