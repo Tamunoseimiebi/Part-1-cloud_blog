@@ -17,6 +17,6 @@ jobs:
       run: | # log into docker hub account
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD  
     - name: Build the Docker image # push The image to the docker hub
-      run: docker build . --file Dockerfile --tag cloud_blog_app
+      run: docker build . --file Dockerfile --tag tamunoseimiebi/cloud_blog_app
     - name: Docker Push
-      run: docker push tamunoseimiebi/cloud_blog_app:latest
+      run: docker push tamunoseimiebi/cloud_blog_app
