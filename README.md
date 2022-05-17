@@ -1,15 +1,17 @@
-Techpet Global DevOps Interns Challenge Part 1
+**Techpet Global DevOps Interns Challenge Part 1**
 Cloud Blog Web Application
 This is a Flask application that lists the latest articles within the cloud-native ecosystem.
 
-Instructions:
+*Instructions:*
 
 1. Fork this repo
 2. Create an optimized dockerfile to dockerize the application.
 3. Use any CICD tool of your choice, create a pipeline that will dockerize and deploy to your docker hub.
 4. Create your own Readme.md file to document the process and your choices.
 
-Task 1: Dockerize the App
+
+
+*Task 1: Dockerize the App*
 
 Clone the forked repo with the following command:
  git clone https://github.com/Tamunoseimiebi/Part-1-cloud_blog.git
@@ -38,7 +40,8 @@ Create a Dockerfile inside the project directory with your favourite editor:
 Save file and exit
 
 Dockerfile explained:
-# syntax=docker/dockerfile:1 it tells the Docker builder what syntax to use while parsing the Dockerfile and the location of the Docker syntax file. it is optional and can be ignored.
+
+syntax=docker/dockerfile: it tells the Docker builder what syntax to use while parsing the Dockerfile and the location of the Docker syntax file. it is optional and can be ignored.
 
 FROM python:3.8-slim-buster : This line tells Docker which base image to use — in this case, a Python image. 
 
@@ -69,7 +72,51 @@ Run docker build command again:  docker run cloud_blog_app .
 The app should run successfully and be available at http://localhost:3111
 
 
-Task 2: CI/CD FIle to dockerize the app and publish to Dockerhub
+*Task 2: CI/CD FIle to dockerize the app and publish to Dockerhub*
+
+1.  Create a .github/workflows folder.
+
+	mkdir -p .github/workflows
 	
+2. Create a .yml file for the pipeline. e.g flask-image.yml
+
+	nano .github/workflows/flask-image.yml
+
+3. Paste in the following code into the file:
+
+
+		name: Dockerhub CI/CD
+		on:
+		  push:
+		    branches:
+		      - main
+		# Env variable
+		env:
+		  DOCKER_USER: ${{secrets.DOCKER_USER}}
+		  DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+		  REPO_NAME: ${{secrets.REPO_NAME}}
+		jobs:
+		  build-image-and-push-image:  # job name
+		    runs-on: ubuntu-latest  # runner name : (ubuntu latest version) 
+		    steps:
+		    - uses: actions/checkout@v2 # first action : checkout source code
+		    - name: docker login
+		      run: | # log into docker hub account
+			docker login -u $DOCKER_USER -p $DOCKER_PASSWORD  
+		    - name: Build the Docker image # push The image to the docker hub
+		      run: docker build . --file Dockerfile --tag tamunoseimiebi/cloud_blog_app
+		    - name: Docker Push
+		      run: docker push tamunoseimiebi/cloud_blog_app
+
+
+CI/CD File explained:
+
+The CI/CD file has three major segmesnts namely: name, env and jobs.
+
+a. Name: Contains useful metadata and other information that describes when the pipeling is triggered and what github branch triggers it.
+
+b. Env: Refers to useful environment variables needed to connect to docker hub.
+
+c. jobs: Refers to the various stages of the pipeline. The pipepline first builds the Dockerfile whenever a commit is made on the main branch and then pushes the generated docker image to Docker Hub.
 
 
