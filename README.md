@@ -54,32 +54,22 @@ This is a Flask application that lists the latest articles within the cloud-nati
 
 ### Dockerfile explained:
 
-	- syntax=docker/dockerfile: it tells the Docker builder what syntax to use while parsing the Dockerfile and the location of the Docker syntax  		                            file. it is optional and can be ignored.
 
+- FROM python:3.8-slim-buster: This line tells Docker which base image to use
 
-	- FROM python:3.8-slim-buster: This line tells Docker which base image to use — in this case, a Python image. 
+- WORKDIR /Part-1-cloud_blog: This command is used to define the working directory of the Docker container
 
+- COPY requirements.txt requirements.txt: is used to copy the contents of our requirements.txt file into the container image's  requirements.txt file. 
 
-	- WORKDIR /Part-1-cloud_blog: The WORKDIR command is used to define the working directory of a Docker container at any given time. The command is 	                                specified in the Dockerfile.
+- RUN pip3 install -r requirements.txt:  THis command is used to install all required dependencies.
 
+- COPY . .   Here we are telling Docker to copy all the  files in our local working directory to the directory in the docker image.
 
-	- COPY requirements.txt requirements.txt:  Here we tell Docker to copy the contents of our requirements.txt file into the container image's 	 	                                            requirements.txt file. 
+- CMD [ "python", "init_db.py" ]  This commands Docker to initialize the database file "database.db".
 
-
-	- RUN pip3 install -r requirements.txt:  Here we tell Docker to run pip install to install all the dependencies in the same file to be used by 	 						  the image.
-
-
-	- COPY . .   Here we are telling Docker to copy all the  files in our local working directory to the directory in the docker image.
-
-
-	- CMD [ "python", "init_db.py" ]  This commands Docker to initialize the database file "database.db".
-
-
-	- CMD [ "python", "app.py"] Ths command is used to start the application.
-
-
-
-
+- CMD [ "python", "app.py"] Ths command is used to start the application.
+-
+***
 
 With our Dockerfile set up, the next step is to build our docker image with this command:
 
