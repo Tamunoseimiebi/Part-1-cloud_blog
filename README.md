@@ -1,6 +1,6 @@
-### Techpet Global DevOps Interns Challenge Part 1
+## Techpet Global DevOps Interns Challenge Part 1
 
-## Cloud Blog Web Application
+### Cloud Blog Web Application
 
 This is a Flask application that lists the latest articles within the cloud-native ecosystem. <br />
 
@@ -15,7 +15,7 @@ This is a Flask application that lists the latest articles within the cloud-nati
 --
 
 
-## Task 1: Dockerize the App
+### Task 1: Dockerize the App
 
 
 1. Clone the forked repo with the following command:
@@ -52,7 +52,7 @@ This is a Flask application that lists the latest articles within the cloud-nati
 
 
 
-## Dockerfile explained:
+### Dockerfile explained:
 
 **syntax=docker/dockerfile:** it tells the Docker builder what syntax to use while parsing the Dockerfile and the location of the Docker syntax file. it is optional and can be ignored.
 
@@ -103,7 +103,7 @@ The app should run successfully and be available at http://localhost:3111
 
 
 
-## Task 2: CI/CD FIle to dockerize the app and publish to Dockerhub
+### Task 2: CI/CD FIle to dockerize the app and publish to Dockerhub
 
 
 1.  Create a .github/workflows folder.
@@ -144,7 +144,7 @@ The app should run successfully and be available at http://localhost:3111
 
 
 
-## CI/CD File explained:
+### CI/CD File explained:
 
 
 The CI/CD file has three major segmesnts namely: name, env and jobs.
