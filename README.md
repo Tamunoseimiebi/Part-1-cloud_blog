@@ -50,7 +50,7 @@ This is a Flask application that lists the latest articles within the cloud-nati
 	
 3. Save file and exit
 
-
+***
 
 ### Dockerfile explained:
 
@@ -101,7 +101,7 @@ If you get this error "ImportError: cannot import name 'escape' from 'jinja2' " 
 
 The app should run successfully and be available at http://localhost:3111
 
-
+***
 
 ### Task 2: CI/CD FIle to dockerize the app and publish to Dockerhub
 
