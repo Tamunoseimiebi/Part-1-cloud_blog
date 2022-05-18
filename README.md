@@ -12,7 +12,7 @@ This is a Flask application that lists the latest articles within the cloud-nati
 4. Create your own Readme.md file to document the process and your choices.
 
 
-
+--
 
 
  **Task 1: Dockerize the App**
