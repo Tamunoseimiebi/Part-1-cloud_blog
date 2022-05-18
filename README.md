@@ -20,13 +20,13 @@ This is a Flask application that lists the latest articles within the cloud-nati
 
 1. Clone the forked repo with the following command:
 
-	 *git clone https://github.com/Tamunoseimiebi/Part-1-cloud_blog.git*
+	 	git clone https://github.com/Tamunoseimiebi/Part-1-cloud_blog.git
 	 
 	
 	
 2. Create a Dockerfile inside the project directory with your favourite editor:
 
-	*nano Dockerfile*
+		nano Dockerfile
 
 		
 #Paste the following inside the Dockerfile	
@@ -83,12 +83,12 @@ This is a Flask application that lists the latest articles within the cloud-nati
 
 With our Dockerfile set up, the next step is to build our docker image with this command:
 
-	 docker build --tag cloud_blog_app .
+		docker build --tag cloud_blog_app .
 
 
 4. Run the app to test if it works:
 
-  	 docker run cloud_blog_app
+ 		docker run cloud_blog_app
 
 
 If you get this error "ImportError: cannot import name 'escape' from 'jinja2' " Update flask and Werkzeug packages in the requirements file to a stable  version. In my case  Flask==2.1.0 and Werkzeug==2.0.0 solved this problem.
@@ -96,7 +96,7 @@ If you get this error "ImportError: cannot import name 'escape' from 'jinja2' " 
 
 5. Run docker build command again:  
   
-   	docker run cloud_blog_app
+   	  	docker run cloud_blog_app 
 
 
 The app should run successfully and be available at http://localhost:3111
