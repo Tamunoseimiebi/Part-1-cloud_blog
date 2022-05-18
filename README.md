@@ -96,7 +96,7 @@ If you get this error "ImportError: cannot import name 'escape' from 'jinja2' " 
 The app should run successfully and be available at http://localhost:3111
 
 <a href="https://github.com/Tamunoseimiebi/Part-1-cloud_blog/">
-    <img src="images/live.png" alt="Live" width="150" height="150">
+    <img src="images/live.png" alt="Live" width="960" height="540">
   </a>
 ***
 
