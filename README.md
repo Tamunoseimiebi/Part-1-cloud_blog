@@ -68,7 +68,7 @@ This is a Flask application that lists the latest articles within the cloud-nati
 - CMD [ "python", "init_db.py" ]  This commands Docker to initialize the database file "database.db".
 
 - CMD [ "python", "app.py"] Ths command is used to start the application.
--
+
 ***
 
 With our Dockerfile set up, the next step is to build our docker image with this command:
@@ -139,10 +139,11 @@ The app should run successfully and be available at http://localhost:3111
 
 The CI/CD file has three major segmesnts namely: name, env and jobs.
 
-	-  Name: Contains useful metadata and other information that describes when the pipeling is triggered and what github branch triggers it.
+-  Name: Contains useful information that describes when the pipeling is triggered and what github branch triggers it.
 
-	-  Env: Refers to useful environment variables needed to connect to docker hub.
+-  Env:  Refers to useful environment variables needed to connect to docker hub.
 
-	-  jobs: Refers to the various stages of the pipeline. The pipepline first builds the Dockerfile whenever a commit is made on the main branch and 	           then pushes the generated docker image to Docker Hub.
+-  jobs: Refers to stages of the pipeline. The pipepline first builds the Dockerfile whenever a commit is made on the main branch 
+         and then pushes the generated docker image to Docker Hub.
 
 
