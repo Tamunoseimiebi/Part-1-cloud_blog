@@ -80,8 +80,11 @@ With our Dockerfile set up, the next step is to build our docker image with this
 
  		docker run cloud_blog_app
 
-
+***
+![alt text](images/error.png)
 If you get this error "ImportError: cannot import name 'escape' from 'jinja2' " Update flask and Werkzeug packages in the requirements file to a stable  version. In my case  Flask==2.1.0 and Werkzeug==2.0.0 solved this problem.
+
+
 
 
 5. Run docker build command again:  
@@ -90,7 +93,7 @@ If you get this error "ImportError: cannot import name 'escape' from 'jinja2' " 
 
 
 The app should run successfully and be available at http://localhost:3111
-
+![alt text](images/live.png)
 ***
 
 ### Task 2: CI/CD FIle to dockerize the app and publish to Dockerhub
