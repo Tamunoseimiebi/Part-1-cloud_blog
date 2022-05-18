@@ -3,7 +3,7 @@
 Cloud Blog Web Application
 
 This is a Flask application that lists the latest articles within the cloud-native ecosystem.
-
+<br />
 *Instructions:*
 
 1. Fork this repo
