@@ -98,6 +98,7 @@ The app should run successfully and be available at http://localhost:3111
 <a href="https://github.com/Tamunoseimiebi/Part-1-cloud_blog/">
     <img src="images/live.png" alt="Live" width="640" height="360">
   </a>
+  
 ***
 
 ### Task 2: CI/CD FIle to dockerize the app and publish to Dockerhub
