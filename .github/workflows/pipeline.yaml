@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - '**/README.md'
 # Env variable
 env:
   DOCKER_USER: ${{secrets.DOCKER_USER}}
