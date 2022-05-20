@@ -152,7 +152,7 @@ Image of the deployed docker image
 ### CI/CD File explained:
 
 
-The CI/CD file has three major segmesnts namely: name, env and jobs.
+The CI/CD file has three major segments namely: name, env and jobs.
 
 -  Name: Contains useful information that describes when the pipeling is triggered and what github branch triggers it.
 
