@@ -141,11 +141,13 @@ The app should run successfully and be available at http://localhost:3111
 		      run: docker push tamunoseimiebi/cloud_blog_app
 
 
-Image of the deployed docker image:
-<a href="https://github.com/Tamunoseimiebi/Part-1-cloud_blog/">
-    <img src="images/hub.png" alt="hub" width="360" height="250">
-    </a>
 
+<a href="https://github.com/Tamunoseimiebi/Part-1-cloud_blog/">
+    <img src="images/hub.png" alt="hub" width="600" height="400">
+    </a>
+Image of the deployed docker image
+
+***
 ### CI/CD File explained:
 
 
