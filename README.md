@@ -93,7 +93,7 @@ If you get this error "ImportError: cannot import name 'escape' from 'jinja2' " 
    	  	docker run cloud_blog_app 
 
 
-The app should run successfully and be available at http://localhost:3111
+The app should run successfully and be available at (http://172.17.0.2:3111/)
 
    <a href="https://github.com/Tamunoseimiebi/Part-1-cloud_blog/">
     <img src="images/live.png" alt="Live" width="640" height="360">
