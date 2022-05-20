@@ -143,7 +143,7 @@ The app should run successfully and be available at http://localhost:3111
 
 
 <a href="https://github.com/Tamunoseimiebi/Part-1-cloud_blog/">
-    <img src="images/hub.png" alt="hub" width="800" height="450">
+    <img src="images/hub.png" alt="hub" width="750" height="450">
     </a>
     <br>
 Image of the deployed docker image
